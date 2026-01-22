@@ -116,92 +116,121 @@
 </head>
 <body class="text-gray-800">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-<h1 class="flex items-center space-x-3 m-0">
-<a href="#home" onclick="showSection('home')" class="flex items-center space-x-3 cursor-pointer">
-<img src="https://github.com/user-attachments/assets/ec67a6c4-6dfb-413e-8a3c-595b33d355e5" alt="Aipath Logo" class="h-12 w-12 object-contain">
-<span class="text-2xl font-extrabold" style="color: #001f54;">株式会社Aipath</span>
-</a>
-</h1>
-<nav class="hidden md:block space-x-8" aria-label="メインナビゲーション">
-<a href="https://sales-x.aipathcorp.com/" target="_blank" rel="noopener" class="text-gray-600 hover:text-blue-600 font-medium">AI Sales X</a>
-<a href="#service" onclick="showSection('service')" class="text-gray-600 hover:text-blue-600 font-medium cursor-pointer">Service</a>
-<a href="#about" onclick="showSection('about')" class="text-gray-600 hover:text-blue-600 font-medium cursor-pointer">About Us</a>
-<a href="https://aipath-jp.github.io/seminar/" target="_blank" rel="noopener" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">無料セミナー予約</a>
-</nav>
-<button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600" onclick="toggleMobileMenu()">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-</button>
-</div>
+<header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+    <h1 class="m-0">
+      <a href="#home" onclick="showSection('home')" class="flex items-center space-x-3 cursor-pointer group">
+        <img src="https://github.com/user-attachments/assets/ec67a6c4-6dfb-413e-8a3c-595b33d355e5" alt="Aipath Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105">
+        <div class="flex flex-col">
+          <span class="text-xl md:text-2xl font-black tracking-tighter" style="color: #001f54;">Aipath</span>
+          <span class="text-[10px] md:text-[12px] font-bold text-blue-600 tracking-[0.2em] -mt-1">株式会社Aipath</span>
+        </div>
+      </a>
+    </h1>
 
-<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-<nav class="px-4 py-4 space-y-3" aria-label="モバイルナビゲーション">
-<a href="https://sales-x.aipathcorp.com/" target="_blank" rel="noopener" class="block text-gray-600 hover:text-blue-600 font-medium py-2">AI Sales X</a>
-<a href="#service" onclick="showSection('service'); toggleMobileMenu();" class="block text-gray-600 hover:text-blue-600 font-medium py-2">Service</a>
-<a href="#about" onclick="showSection('about'); toggleMobileMenu();" class="block text-gray-600 hover:text-blue-600 font-medium py-2">About Us</a>
-<a href="https://timerex.net/s/mindstaff.yota_41d1/2e7c21f4" target="_blank" rel="noopener" class="block text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">無料セミナー予約</a>
-</nav>
-</div>
+    <nav class="hidden md:flex items-center space-x-10" aria-label="メインナビゲーション">
+      <a href="https://sales-x.aipathcorp.com/" target="_blank" class="text-gray-600 hover:text-blue-600 font-bold text-sm tracking-wide transition-colors">AI Sales X</a>
+      <a href="#service" onclick="showSection('service')" class="text-gray-600 hover:text-blue-600 font-bold text-sm tracking-wide transition-colors cursor-pointer">Service</a>
+      <a href="#about" onclick="showSection('about')" class="text-gray-600 hover:text-blue-600 font-bold text-sm tracking-wide transition-colors cursor-pointer">About Us</a>
+      <a href="https://aipath-jp.github.io/seminar/" target="_blank" class="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+        無料セミナー予約
+      </a>
+    </nav>
+
+    <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMobileMenu()">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 animate-fadeIn">
+    <nav class="px-6 py-8 space-y-4 shadow-xl">
+      <a href="https://sales-x.aipathcorp.com/" target="_blank" class="block text-lg text-gray-800 font-bold border-b border-gray-50 pb-2">AI Sales X</a>
+      <a href="#service" onclick="showSection('service'); toggleMobileMenu();" class="block text-lg text-gray-800 font-bold border-b border-gray-50 pb-2">Service</a>
+      <a href="#about" onclick="showSection('about'); toggleMobileMenu();" class="block text-lg text-gray-800 font-bold border-b border-gray-50 pb-2">About Us</a>
+      <a href="https://aipath-jp.github.io/seminar/" target="_blank" class="block text-center px-4 py-4 bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-200">無料セミナー予約</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 <section id="home" class="section active">
-    <div class="hero-bg relative flex items-center min-h-[90vh]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center relative z-10">
-            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight font-en">
-                AIと共に生きる<br class="md:hidden" />新世代へ<br>
+    <div class="hero-bg relative flex items-center min-h-[85vh] md:min-h-[90vh] overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10 text-center md:text-left">
+            <div class="inline-block px-4 py-1.5 mb-6 bg-blue-600/20 border border-blue-400/30 rounded-full backdrop-blur-sm">
+                <span class="text-blue-400 text-xs md:text-sm font-bold tracking-widest uppercase font-en">AI Compass For Your Success</span>
+            </div>
+            
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.15] tracking-tight">
+                AIと共に生きる<br class="md:hidden">新世代へ<br>
                 <span class="text-gradient">可能性を解き放つ</span>
             </h2>
             
-            <p class="text-base md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+            <p class="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl leading-relaxed font-light">
                 テクノロジー・言語・コストの壁を攻略。<br class="hidden md:block">
-                人材とビジネスをあらゆる角度からスケール化し、<br class="md:hidden">未来を実装します。
+                500万社のデータと専門人材が、貴社のビジネスを<br class="hidden md:block">
+                あらゆる角度からスケール化し、未来を実装します。
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#service" onclick="showSection('service')" class="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition duration-300 shadow-[0_0_20px_rgba(37,99,235,0.5)] flex justify-center items-center group">
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-6">
+                <a href="#service" onclick="showSection('service')" class="w-full sm:w-auto px-10 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-500 transition duration-300 shadow-[0_10px_30px_rgba(37,99,235,0.4)] flex justify-center items-center group">
                     サービスを見る
-                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="#about" onclick="showSection('about')" class="w-full sm:w-auto px-10 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition backdrop-blur-md border border-white/20">
+                    Aipathについて
                 </a>
             </div>
         </div>
         
-        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#f8fafc] to-transparent z-0"></div>
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f8fafc] to-transparent z-0"></div>
     </div>
 
-    <div class="py-16 md:py-24 bg-white">
+<div class="py-20 md:py-32 bg-[#f8fafc]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
-                <span class="text-black">Aipath</span>の特徴
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+                    Aipathの強み
+                </h2>
+                <p class="text-gray-500 font-medium">圧倒的な成果を生み出す、3つのコア・コンピタンス</p>
+                <div class="h-1.5 w-16 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+            </div>
 
-                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-transparent hover:border-blue-500">
-                    <img src="https://github.com/user-attachments/assets/f1e5923d-ef69-461d-b30e-5c85efeb364e" alt="専門人材イメージ" class="h-16 w-16 mx-auto mb-4 object-contain">
-                    <h3 class="text-xl font-bold mb-3 text-center">専門人材</h3>
-                    <p class="text-gray-600 text-center">DX、開発、教育それぞれの分野に特化した専門人材が、クライアントのニーズに寄り添いサポート</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div class="feature-card bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 mb-8 flex items-center justify-center bg-blue-50 rounded-2xl">
+                        <img src="https://github.com/user-attachments/assets/f1e5923d-ef69-461d-b30e-5c85efeb364e" alt="専門人材" class="h-12 w-12 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">専門人材</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        DX・開発・教育の各領域に精通したエキスパートが、単なるツールの提供を超え、貴社の組織文化に根ざした伴走支援を行います。
+                    </p>
                 </div>
 
-                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-transparent hover:border-blue-500">
-                    <img src="https://github.com/user-attachments/assets/3cef8fd7-0e2b-4c51-89c4-ed7ca658cd66" alt="ITツールイメージ" class="h-16 w-16 mx-auto mb-4 object-contain">
-                    <h3 class="text-xl font-bold mb-3 text-center">ITツール×ビッグデータ</h3>
-                    <p class="text-gray-600 text-center">AI Sales Xを筆頭とするITツール+550万社以上のビッグデータにより、あらゆるタイプのB2B事業に対応可能</p>
+                <div class="feature-card bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center relative md:-translate-y-4">
+                    <div class="w-20 h-20 mb-8 flex items-center justify-center bg-cyan-50 rounded-2xl">
+                        <img src="https://github.com/user-attachments/assets/3cef8fd7-0e2b-4c51-89c4-ed7ca658cd66" alt="ビッグデータ" class="h-12 w-12 object-contain">
+                    </div>
+                    <h3 class="text-lg md:text-2xl font-bold mb-4 text-gray-900">ITツール×ビッグデータ</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        550万社超の独自データと、最先端AIエージェントを融合。ターゲット選定からアプローチまで、科学的根拠に基づいた営業戦略を実現します。
+                    </p>
                 </div>
 
-                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-transparent hover:border-blue-500">
-                    <img src="https://github.com/user-attachments/assets/c0222428-ce7d-4dcd-8cf7-6f4db8957d91" alt="コンサルティングイメージ" class="h-16 w-16 mx-auto mb-4 object-contain">
-                    <h3 class="text-xl font-bold mb-3 text-center">コンサルティング</h3>
-                    <p class="text-gray-600 text-center">ヒアリングから設計、PoC、運用、アフターサービスまで一貫したサポートを提供</p>
+                <div class="feature-card bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 mb-8 flex items-center justify-center bg-indigo-50 rounded-2xl">
+                        <img src="https://github.com/user-attachments/assets/c0222428-ce7d-4dcd-8cf7-6f4db8957d91" alt="コンサルティング" class="h-12 w-12 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">コンサルティング</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        戦略立案からPoC（概念実証）、本格運用後のアフターフォローまで。点ではなく「線」のサポートで、DXの確実な成功を約束します。
+                    </p>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
 
-
-<section id="service" class="section py-16 md:py-24 bg-white active">
+<section id="service" class="section py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
@@ -359,7 +388,7 @@
 </section>
 
 
-<section id="about" class="section py-16 md:py-24 bg-gray-50 active">
+<section id="about" class="section py-16 md:py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
@@ -599,20 +628,43 @@
 </div>
 </section>
 
-<section id="contact" class="py-16 bg-blue-600">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-<h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-お問い合わせ
-</h2>
-<p class="text-xl mb-8">
-サービスに関するご質問やご相談は、お気軽にお問い合わせください。
-</p>
-<a href="https://forms.gle/veFoqwgNMiioPrHcA" target="_blank" rel="noopener" class="inline-block px-10 py-4 bg-white text-blue-600 text-xl font-bold rounded-full shadow-2xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-お問い合わせフォームへ
-</a>
-</div>
-</section>
+<section id="contact" class="py-20 bg-gradient-to-b from-white to-blue-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative bg-blue-600 rounded-3xl shadow-2xl overflow-hidden px-8 py-12 md:py-16 text-center">
+      
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500 rounded-full opacity-50"></div>
+      <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-700 rounded-full opacity-50"></div>
 
+      <div class="relative z-10">
+        <span class="inline-block px-4 py-1 mb-4 text-sm font-semibold tracking-widest text-blue-100 uppercase bg-blue-700 rounded-full">
+          Contact Us
+        </span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+          まずはお気軽にご相談ください
+        </h2>
+        <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+          サービス導入に関するご質問、お見積りのご依頼など、<br class="hidden md:block">
+          専任のスタッフが丁寧に対応させていただきます。
+        </p>
+        
+        <div class="flex flex-col items-center space-y-4">
+          <a href="https://forms.gle/veFoqwgNMiioPrHcA" 
+             target="_blank" 
+             rel="noopener" 
+             class="group inline-flex items-center justify-center px-10 py-4 bg-white text-blue-600 text-xl font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <span>お問い合わせフォームへ</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <p class="text-blue-200 text-sm italic">
+            ※通常1〜2営業日以内に返信いたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="bg-gray-800 text-white py-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <p class="mb-4">© 2025 Aipath Co., Ltd. All rights reserved.</p>
